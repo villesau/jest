@@ -140,6 +140,7 @@ export default class Jasmine2Reporter implements Reporter {
       : null;
     const results: AssertionResult = {
       ancestorTitles,
+      depth: specResult.depth,
       duration,
       failureMessages: [],
       fullName: specResult.fullName,

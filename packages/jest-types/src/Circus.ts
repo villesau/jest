@@ -153,6 +153,7 @@ export type Event =
 
 export type TestStatus = 'skip' | 'done' | 'todo';
 export type TestResult = {
+  depth: number;
   duration?: number | null;
   errors: Array<FormattedError>;
   invocations: number;
@@ -212,6 +213,7 @@ export type TestEntry = {
   name: TestName;
   parent: DescribeBlock;
   startedAt?: number | null;
+  depth: number;
   duration?: number | null;
   status?: TestStatus | null; // whether the test has been skipped or run already
   timeout?: number;

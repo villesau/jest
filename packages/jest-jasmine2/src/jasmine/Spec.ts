@@ -31,6 +31,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /* eslint-disable sort-keys */
 
 import {AssertionError} from 'assert';
+import {Session} from 'inspector';
+import {promisify} from 'util';
 import {Config} from '@jest/types';
 import {FailedAssertion, Milliseconds, Status} from '@jest/test-result';
 
@@ -64,6 +66,7 @@ export type SpecResult = {
   description: string;
   fullName: string;
   duration?: Milliseconds;
+  depth: number;
   failedExpectations: Array<FailedAssertion>;
   testPath: Config.Path;
   passedExpectations: Array<ReturnType<typeof expectationResultFactory>>;
@@ -187,6 +190,31 @@ export default class Spec {
     }
 
     const fns = this.beforeAndAfterFns();
+    const fn = this.queueableFn.fn;
+    const session = new Session();
+    const postSession = promisify(session.post.bind(session));
+    session.connect();
+    this.queueableFn.fn = async (...args) => {
+      // @ts-ignore
+      await postSession('Profiler.enable');
+      // @ts-ignore
+      await postSession('Profiler.startPreciseCoverage', {
+        callCount: true,
+        detailed: true,
+      });
+      try {
+        return fn(...args);
+      } finally {
+        // @ts-ignore
+        const {result} = await postSession('Profiler.takePreciseCoverage');
+        self.result.depth = result
+          .filter((res: any) => !res.url.includes('/node_modules/'))
+          .map((res: any) => res.functions)
+          .flat().length;
+        // @ts-ignore
+        await postSession('Profiler.stopPreciseCoverage');
+      }
+    };
     const allFns = fns.befores.concat(this.queueableFn).concat(fns.afters);
 
     this.currentRun = this.queueRunnerFactory({

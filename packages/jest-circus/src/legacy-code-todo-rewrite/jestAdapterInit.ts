@@ -185,6 +185,7 @@ export const runAndTransformResultsToJestFormat = async ({
 
       return {
         ancestorTitles,
+        depth: testResult.depth,
         duration: testResult.duration,
         failureMessages: testResult.errors,
         fullName: title

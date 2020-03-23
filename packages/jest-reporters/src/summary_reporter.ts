@@ -6,7 +6,11 @@
  */
 
 import {Config} from '@jest/types';
-import {AggregatedResult, SnapshotSummary} from '@jest/test-result';
+import {
+  AggregatedResult,
+  AssertionResult,
+  SnapshotSummary,
+} from '@jest/test-result';
 import chalk = require('chalk');
 import {testPathPatternToRegExp} from 'jest-util';
 import {Context, ReporterOnStartOptions} from './types';
@@ -188,6 +192,28 @@ export default class SummaryReporter extends BaseReporter {
         }
       });
       this.log(''); // print empty line
+    }
+
+    if (failedTests) {
+      const smallestTests = aggregatedResults.testResults
+        .map(result =>
+          result.testResults
+            .filter(test => test.status === 'failed')
+            .sort((res1, res2) => (res1.depth >= res2.depth ? 1 : -1)),
+        )
+        .flat();
+
+      this.log('');
+      this.log('--------');
+      this.log(chalk.bold('Fix in this order: '));
+      smallestTests.forEach((test: AssertionResult, index: number) => {
+        const testName = [...test.ancestorTitles, test.title].join(' › ');
+        this.log(
+          index + 1 + '. ' + chalk.bold.red(testName) + ' depth:' + test.depth,
+        );
+      });
+      this.log('--------');
+      this.log('');
     }
   }
 

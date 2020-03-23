@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshots all have results (after update) 1`] = `
-"<bold>Snapshot Summary</>
+"
+--------
+<bold>Fix in this order: </>
+--------
+
+<bold>Snapshot Summary</>
 <bold><green> › 1 snapshot written </></>from 1 test suite.
 <bold><red> › 1 snapshot failed</></> from 1 test suite. <dim>Inspect your code changes or run \`yarn test -u\` to update them.</>
 <bold><green> › 1 snapshot updated </></>from 1 test suite.
@@ -19,7 +24,12 @@ exports[`snapshots all have results (after update) 1`] = `
 `;
 
 exports[`snapshots all have results (no update) 1`] = `
-"<bold>Snapshot Summary</>
+"
+--------
+<bold>Fix in this order: </>
+--------
+
+<bold>Snapshot Summary</>
 <bold><green> › 1 snapshot written </></>from 1 test suite.
 <bold><red> › 1 snapshot failed</></> from 1 test suite. <dim>Inspect your code changes or run \`yarn test -u\` to update them.</>
 <bold><green> › 1 snapshot updated </></>from 1 test suite.
@@ -37,7 +47,12 @@ exports[`snapshots all have results (no update) 1`] = `
 `;
 
 exports[`snapshots needs update with npm test 1`] = `
-"<bold>Snapshot Summary</>
+"
+--------
+<bold>Fix in this order: </>
+--------
+
+<bold>Snapshot Summary</>
 <bold><red> › 2 snapshots failed</></> from 1 test suite. <dim>Inspect your code changes or run \`npm test -- -u\` to update them.</>
 
 <bold>Test Suites: </><bold><red>1 failed</></>, 1 total
@@ -49,7 +64,12 @@ exports[`snapshots needs update with npm test 1`] = `
 `;
 
 exports[`snapshots needs update with yarn test 1`] = `
-"<bold>Snapshot Summary</>
+"
+--------
+<bold>Fix in this order: </>
+--------
+
+<bold>Snapshot Summary</>
 <bold><red> › 2 snapshots failed</></> from 1 test suite. <dim>Inspect your code changes or run \`yarn test -u\` to update them.</>
 
 <bold>Test Suites: </><bold><red>1 failed</></>, 1 total

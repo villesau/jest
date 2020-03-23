@@ -45,6 +45,7 @@ export const makeTest = (
   asyncError: Circus.Exception,
 ): Circus.TestEntry => ({
   asyncError,
+  depth: Infinity,
   duration: null,
   errors: [],
   fn,
@@ -286,6 +287,7 @@ const makeTestResults = (
     }
 
     testResults.push({
+      depth: test.depth,
       duration: test.duration,
       errors: test.errors.map(_formatError),
       invocations: test.invocations,
