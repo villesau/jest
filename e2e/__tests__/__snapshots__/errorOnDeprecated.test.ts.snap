@@ -21,7 +21,7 @@ FAIL __tests__/defaultTimeoutInterval.test.js
 
 --------
 Fix in this order: 
-1. Default Timeout Interval (depth: 17)
+1. Default Timeout Interval
 --------
 `;
 
@@ -46,7 +46,7 @@ FAIL __tests__/fail.test.js
 
 --------
 Fix in this order: 
-1. fail (depth: 17)
+1. fail
 --------
 `;
 
@@ -87,7 +87,7 @@ FAIL __tests__/jasmine.any.test.js
 
 --------
 Fix in this order: 
-1. jasmine.any (depth: 33)
+1. jasmine.any
 --------
 `;
 
@@ -111,7 +111,7 @@ FAIL __tests__/jasmine.anything.test.js
 
 --------
 Fix in this order: 
-1. jasmine.anything (depth: 33)
+1. jasmine.anything
 --------
 `;
 
@@ -135,7 +135,7 @@ FAIL __tests__/jasmine.arrayContaining.test.js
 
 --------
 Fix in this order: 
-1. jasmine.arrayContaining (depth: 33)
+1. jasmine.arrayContaining
 --------
 `;
 
@@ -160,7 +160,7 @@ FAIL __tests__/jasmine.createSpy.test.js
 
 --------
 Fix in this order: 
-1. jasmine.createSpy (depth: 17)
+1. jasmine.createSpy
 --------
 `;
 
@@ -185,7 +185,7 @@ FAIL __tests__/jasmine.objectContaining.test.js
 
 --------
 Fix in this order: 
-1. jasmine.objectContaining (depth: 33)
+1. jasmine.objectContaining
 --------
 `;
 
@@ -209,7 +209,7 @@ FAIL __tests__/jasmine.stringMatching.test.js
 
 --------
 Fix in this order: 
-1. jasmine.stringMatching (depth: 33)
+1. jasmine.stringMatching
 --------
 `;
 
@@ -234,7 +234,7 @@ FAIL __tests__/pending.test.js
 
 --------
 Fix in this order: 
-1. pending (depth: 17)
+1. pending
 --------
 `;
 
@@ -259,7 +259,7 @@ FAIL __tests__/spyOn.test.js
 
 --------
 Fix in this order: 
-1. spyOn (depth: 17)
+1. spyOn
 --------
 `;
 
@@ -284,6 +284,6 @@ FAIL __tests__/spyOnProperty.test.js
 
 --------
 Fix in this order: 
-1. spyOnProperty (depth: 18)
+1. spyOnProperty
 --------
 `;

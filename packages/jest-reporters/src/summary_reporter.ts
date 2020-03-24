@@ -208,15 +208,7 @@ export default class SummaryReporter extends BaseReporter {
       this.log(chalk.bold('Fix in this order: '));
       smallestTests.forEach((test: AssertionResult, index: number) => {
         const testName = [...test.ancestorTitles, test.title].join(' › ');
-        this.log(
-          index +
-            1 +
-            '. ' +
-            chalk.bold.red(testName) +
-            ' (depth: ' +
-            test.depth +
-            ')',
-        );
+        this.log(index + 1 + '. ' + chalk.bold.red(testName));
       });
       this.log('--------');
       this.log('');

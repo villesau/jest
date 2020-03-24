@@ -96,8 +96,8 @@ FAIL __tests__/eachException.test.js
 
 --------
 Fix in this order: 
-1. throws exception when one argument too few are supplied $left == $right (depth: 13)
-2. throws exception when not enough arguments are supplied $left == $right (depth: 13)
+1. throws exception when one argument too few are supplied $left == $right
+2. throws exception when not enough arguments are supplied $left == $right
 --------
 `;
 
@@ -374,18 +374,18 @@ FAIL __tests__/failure.test.js
 
 --------
 Fix in this order:
-1. array table fails on one row: expected true == false (depth: 88)
-2. template table fails on one row expected: true == false (depth: 88)
-3. The word red contains the letter 'z' (depth: 88)
-4. The word green contains the letter 'z' (depth: 88)
-5. The word bean contains the letter 'z' (depth: 88)
-6. array table fails on all rows expected 1 == 2 (depth: 89)
-7. array table fails on all rows expected 3 == 4 (depth: 89)
-8. template table fails on all rows expected: 1 == 2 (depth: 89)
-9. template table fails on all rows expected: 3 == 4 (depth: 89)
-10. template table describe fails on all rows expected "a" == "b" › fails  (depth: 112)
-11. template table describe fails on all rows expected "c" == "d" › fails  (depth: 112)
-12. array table describe fails on all rows expected a == b › fails (depth: 112)
-13. array table describe fails on all rows expected c == d › fails (depth: 112)
+1. array table fails on one row: expected true == false
+2. template table fails on one row expected: true == false
+3. The word red contains the letter 'z'
+4. The word green contains the letter 'z'
+5. The word bean contains the letter 'z'
+6. array table fails on all rows expected 1 == 2
+7. array table fails on all rows expected 3 == 4
+8. template table fails on all rows expected: 1 == 2
+9. template table fails on all rows expected: 3 == 4
+10. template table describe fails on all rows expected "a" == "b" › fails
+11. template table describe fails on all rows expected "c" == "d" › fails
+12. array table describe fails on all rows expected a == b › fails
+13. array table describe fails on all rows expected c == d › fails
 --------
 `;

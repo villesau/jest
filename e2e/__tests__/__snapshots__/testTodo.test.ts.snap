@@ -80,6 +80,6 @@ FAIL __tests__/statuses.test.js
 
 --------
 Fix in this order: 
-1. fails (depth: 88)
+1. fails
 --------
 `;

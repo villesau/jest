@@ -21,7 +21,7 @@ FAIL __tests__/asynchronous.test.js
 
 --------
 Fix in this order: 
-1. showing the stack trace for an async matcher (depth: 45)
+1. showing the stack trace for an async matcher
 --------
 `;
 
@@ -54,6 +54,6 @@ FAIL __tests__/sync.test.js
 
 --------
 Fix in this order: 
-1. Custom matcher › preserves error stack (depth: 47)
+1. Custom matcher › preserves error stack
 --------
 `;

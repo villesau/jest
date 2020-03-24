@@ -14,7 +14,7 @@ FAIL __tests__/bar.spec.js
  › 1 snapshot failed.
 --------
 Fix in this order:
-1. bar (depth: 121)
+1. bar
 --------
 Snapshot Summary
  › 1 snapshot failed from 1 test suite. Inspect your code changes or press \`u\` to update them.

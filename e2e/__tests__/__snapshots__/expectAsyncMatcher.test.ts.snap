@@ -86,9 +86,9 @@ FAIL __tests__/failure.test.js
 
 --------
 Fix in this order: 
-1. fail with expected promise values (depth: 33)
-2. fail with expected promise values and not (depth: 33)
-3. fail with expected non promise values (depth: 46)
-4. fail with expected non promise values and not (depth: 46)
+1. fail with expected promise values
+2. fail with expected promise values and not
+3. fail with expected non promise values
+4. fail with expected non promise values and not
 --------
 `;
