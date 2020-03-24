@@ -17,6 +17,12 @@ FAIL __tests__/defaultTimeoutInterval.test.js
       13 | 
 
       at Object.<anonymous> (__tests__/defaultTimeoutInterval.test.js:10:3)
+
+
+--------
+Fix in this order: 
+1. Default Timeout Interval (depth: 17)
+--------
 `;
 
 exports[`fail.test.js errors in errorOnDeprecated mode 1`] = `
@@ -36,6 +42,12 @@ FAIL __tests__/fail.test.js
       16 | 
 
       at Object.fail (__tests__/fail.test.js:13:5)
+
+
+--------
+Fix in this order: 
+1. fail (depth: 17)
+--------
 `;
 
 exports[`jasmine.addMatchers.test.js errors in errorOnDeprecated mode 1`] = `
@@ -71,6 +83,12 @@ FAIL __tests__/jasmine.any.test.js
       12 | 
 
       at Object.any (__tests__/jasmine.any.test.js:10:51)
+
+
+--------
+Fix in this order: 
+1. jasmine.any (depth: 33)
+--------
 `;
 
 exports[`jasmine.anything.test.js errors in errorOnDeprecated mode 1`] = `
@@ -89,6 +107,12 @@ FAIL __tests__/jasmine.anything.test.js
       12 | 
 
       at Object.anything (__tests__/jasmine.anything.test.js:10:62)
+
+
+--------
+Fix in this order: 
+1. jasmine.anything (depth: 33)
+--------
 `;
 
 exports[`jasmine.arrayContaining.test.js errors in errorOnDeprecated mode 1`] = `
@@ -107,6 +131,12 @@ FAIL __tests__/jasmine.arrayContaining.test.js
       12 | 
 
       at Object.arrayContaining (__tests__/jasmine.arrayContaining.test.js:10:45)
+
+
+--------
+Fix in this order: 
+1. jasmine.arrayContaining (depth: 33)
+--------
 `;
 
 exports[`jasmine.createSpy.test.js errors in errorOnDeprecated mode 1`] = `
@@ -126,6 +156,12 @@ FAIL __tests__/jasmine.createSpy.test.js
       13 | });
 
       at Object.createSpy (__tests__/jasmine.createSpy.test.js:10:25)
+
+
+--------
+Fix in this order: 
+1. jasmine.createSpy (depth: 17)
+--------
 `;
 
 exports[`jasmine.objectContaining.test.js errors in errorOnDeprecated mode 1`] = `
@@ -145,6 +181,12 @@ FAIL __tests__/jasmine.objectContaining.test.js
       14 | 
 
       at Object.objectContaining (__tests__/jasmine.objectContaining.test.js:11:13)
+
+
+--------
+Fix in this order: 
+1. jasmine.objectContaining (depth: 33)
+--------
 `;
 
 exports[`jasmine.stringMatching.test.js errors in errorOnDeprecated mode 1`] = `
@@ -163,6 +205,12 @@ FAIL __tests__/jasmine.stringMatching.test.js
       12 | 
 
       at Object.stringMatching (__tests__/jasmine.stringMatching.test.js:10:50)
+
+
+--------
+Fix in this order: 
+1. jasmine.stringMatching (depth: 33)
+--------
 `;
 
 exports[`pending.test.js errors in errorOnDeprecated mode 1`] = `
@@ -182,6 +230,12 @@ FAIL __tests__/pending.test.js
       14 | });
 
       at Object.pending (__tests__/pending.test.js:11:5)
+
+
+--------
+Fix in this order: 
+1. pending (depth: 17)
+--------
 `;
 
 exports[`spyOn.test.js errors in errorOnDeprecated mode 1`] = `
@@ -201,6 +255,12 @@ FAIL __tests__/spyOn.test.js
       18 | 
 
       at Object.spyOn (__tests__/spyOn.test.js:15:3)
+
+
+--------
+Fix in this order: 
+1. spyOn (depth: 17)
+--------
 `;
 
 exports[`spyOnProperty.test.js errors in errorOnDeprecated mode 1`] = `
@@ -220,4 +280,10 @@ FAIL __tests__/spyOnProperty.test.js
       27 | 
 
       at Object.spyOnProperty (__tests__/spyOnProperty.test.js:24:15)
+
+
+--------
+Fix in this order: 
+1. spyOnProperty (depth: 18)
+--------
 `;

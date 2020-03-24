@@ -82,4 +82,12 @@ FAIL __tests__/chai_assertion.js
       27 | 
 
       at Object.strictEqual (__tests__/chai_assertion.js:24:17)
+
+
+--------
+Fix in this order: 
+1. chai.js assertion library test › expect (depth: 13)
+2. chai.js assertion library test › should (depth: 13)
+3. chai.js assertion library test › assert (depth: 13)
+--------
 `;

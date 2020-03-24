@@ -17,6 +17,12 @@ FAIL __tests__/asynchronous.test.js
       14 |   const message = () =>
 
       at Object.toThrowCustomAsyncMatcherError (__tests__/asynchronous.test.js:11:16)
+
+
+--------
+Fix in this order: 
+1. showing the stack trace for an async matcher (depth: 45)
+--------
 `;
 
 exports[`works with custom matchers 1`] = `
@@ -44,4 +50,10 @@ FAIL __tests__/sync.test.js
       at foo (__tests__/sync.test.js:52:7)
       at Object.callback (__tests__/sync.test.js:11:18)
       at Object.toCustomMatch (__tests__/sync.test.js:53:8)
+
+
+--------
+Fix in this order: 
+1. Custom matcher › preserves error stack (depth: 47)
+--------
 `;

@@ -109,6 +109,15 @@ FAIL __tests__/assertionCount.test.js
       29 | describe('.assertions()', () => {
 
       at Object.hasAssertions (__tests__/assertionCount.test.js:26:10)
+
+
+--------
+Fix in this order: 
+1. .hasAssertions() › throws when there are not assertions (depth: 18)
+2. .assertions() › throws on assertion (depth: 49)
+3. .assertions() › throws (depth: 67)
+4. .assertions() › throws on redeclare of assertion count (depth: 67)
+--------
 `;
 
 exports[`not throwing Error objects 5`] = `
@@ -211,7 +220,7 @@ FAIL __tests__/duringTests.test.js
       40 | 
       41 | test('done(non-error)', done => {
 
-      at Object.<anonymous> (__tests__/duringTests.test.js:38:8)
+      at __tests__/duringTests.test.js:38:8
 
   ● done(non-error)
 
@@ -232,7 +241,7 @@ FAIL __tests__/duringTests.test.js
       44 | 
       45 | test('returned promise rejection', () => Promise.reject(deepObject));
 
-      at Object.done (__tests__/duringTests.test.js:42:3)
+      at done (__tests__/duringTests.test.js:42:3)
 
   ● returned promise rejection
 
@@ -252,6 +261,19 @@ FAIL __tests__/duringTests.test.js
       46 | 
 
       at Object.test (__tests__/duringTests.test.js:45:1)
+
+
+--------
+Fix in this order: 
+1. Promise thrown during test (depth: 13)
+2. Boolean thrown during test (depth: 13)
+3. undefined thrown during test (depth: 13)
+4. Object thrown during test (depth: 13)
+5. Error during test (depth: 13)
+6. returned promise rejection (depth: 18)
+7. done(Error) (depth: 25)
+8. done(non-error) (depth: 84)
+--------
 `;
 
 exports[`works with assertions in separate files 1`] = `
@@ -274,6 +296,12 @@ FAIL __tests__/testMacro.test.js
 
       at toEqual (macros.js:10:15)
       at Object.shouldEqual (__tests__/testMacro.test.js:13:3)
+
+
+--------
+Fix in this order: 
+1. use some imported macro to make assertion (depth: 87)
+--------
 `;
 
 exports[`works with async failures 1`] = `
@@ -375,6 +403,16 @@ FAIL __tests__/asyncFailures.test.js
       25 | 
 
       at Object.test (__tests__/asyncFailures.test.js:22:1)
+
+
+--------
+Fix in this order: 
+1. timeout (depth: 27)
+2. resolve, but fail (depth: 33)
+3. expect reject (depth: 33)
+4. expect resolve (depth: 37)
+5. reject, but fail (depth: 41)
+--------
 `;
 
 exports[`works with node assert 1`] = `
@@ -807,6 +845,30 @@ FAIL __tests__/assertionError.test.js
       90 | 
 
       at Object.fail (__tests__/assertionError.test.js:88:10)
+
+
+--------
+Fix in this order: 
+1. assert.fail (depth: 21)
+2. assert.fail with a message (depth: 21)
+3. assert with a message (depth: 22)
+4. assert.ok with a message (depth: 22)
+5. assert.notStrictEqual (depth: 22)
+6. assert.doesNotThrow (depth: 25)
+7. assert.throws (depth: 25)
+8. assert.deepEqual with a message (depth: 27)
+9. assert.ifError (depth: 27)
+10. async (depth: 27)
+11. assert.equal (depth: 32)
+12. assert.notEqual (depth: 32)
+13. assert.strictEqual (depth: 33)
+14. assert.notDeepEqual (depth: 44)
+15. assert.notDeepStrictEqual (depth: 44)
+16. assert.deepStrictEqual (depth: 45)
+17. assert.deepEqual (depth: 64)
+18. assert.ok (depth: 155)
+19. assert (depth: 456)
+--------
 `;
 
 exports[`works with snapshot failures 1`] = `
@@ -833,6 +895,12 @@ FAIL __tests__/snapshot.test.js
 
  › 1 snapshot failed.
 
+--------
+Fix in this order: 
+1. failing snapshot (depth: 121)
+--------
+
+
 `;
 
 exports[`works with snapshot failures with hint 1`] = `
@@ -858,5 +926,11 @@ FAIL __tests__/snapshotWithHint.test.js
       at Object.toMatchSnapshot (__tests__/snapshotWithHint.test.js:11:17)
 
  › 1 snapshot failed.
+
+--------
+Fix in this order: 
+1. failing snapshot with hint (depth: 121)
+--------
+
 
 `;

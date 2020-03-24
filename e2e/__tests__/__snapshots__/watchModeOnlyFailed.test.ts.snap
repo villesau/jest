@@ -9,6 +9,10 @@ FAIL __tests__/bar.spec.js
     > 1 | test('bar 1', () => { expect('bar').toBe('foo'); });
         |                                     ^
       at Object.toBe (__tests__/bar.spec.js:1:37)
+--------
+Fix in this order:
+1. bar 1 (depth: 112)
+--------
 
 PASS __tests__/foo.spec.js
 `;
@@ -23,6 +27,10 @@ FAIL __tests__/bar.spec.js
     > 1 | test('bar 1', () => { expect('bar').toBe('foo'); });
         |                                     ^
       at Object.toBe (__tests__/bar.spec.js:1:37)
+--------
+Fix in this order:
+1. bar 1 (depth: 112)
+--------
 
 `;
 
