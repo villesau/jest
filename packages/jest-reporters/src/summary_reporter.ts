@@ -209,7 +209,13 @@ export default class SummaryReporter extends BaseReporter {
       smallestTests.forEach((test: AssertionResult, index: number) => {
         const testName = [...test.ancestorTitles, test.title].join(' › ');
         this.log(
-          index + 1 + '. ' + chalk.bold.red(testName) + ' depth:' + test.depth,
+          index +
+            1 +
+            '. ' +
+            chalk.bold.red(testName) +
+            ' (depth: ' +
+            test.depth +
+            ')',
         );
       });
       this.log('--------');
